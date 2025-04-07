@@ -1,0 +1,168 @@
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:sans-serif;
+    line-height: 1.6;
+    background-color: lightgray;
+    color: dimgray;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: gainsboro;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+}
+
+#about {
+    background-color: whitesmoke;
+}
+
+#projects {
+    background-color: white;
+}
+
+#blog {
+    background-color: gainsboro;
+}
+
+#contact {
+    background-color: whitesmoke;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: black;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Kept rgba for transparency */
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-item h3 {
+    margin: 1rem;
+    color: black;
+}
+
+.project-item p {
+    margin: 0 1rem 1rem;
+    color: gray;
+}
+
+.project-item a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0 1rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-item a:hover {
+    background-color: darkslategray;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Simple Animation Example */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
